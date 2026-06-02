@@ -3,216 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人简历 | 软件工程专业</title>
+    <title>高榆棋 - 个人简历</title>
     <style>
-        body {
-            background: linear-gradient(135deg, #e0e7ff 0%, #f0fff4 100%);
-            color: #22223b;
-            font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
         }
-        .resume-wrapper {
-            max-width: 850px;
-            margin: 40px auto;
+        body {
+            background: #eee;
+            padding: 30px;
+        }
+        .resume-box {
+            width: 820px;
+            margin: 0 auto;
             background: #fff;
-            border-radius: 18px;
-            box-shadow: 0 8px 32px rgba(44,62,80,0.12);
-            overflow: hidden;
-            border: 1px solid #e2e8f0;
+            padding: 40px 50px;
+            box-shadow: 0 0 12px #ddd;
         }
-        .resume-header {
-            background: linear-gradient(90deg, #48bb78 0%, #4299e1 100%);
-            color: #fff;
-            padding: 38px 40px 28px 40px;
+        .header {
             display: flex;
             align-items: center;
-            gap: 32px;
+            gap:22px;
+            margin-bottom:35px;
         }
         .avatar {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            border: 4px solid #fff;
-            object-fit: cover;
-            box-shadow: 0 2px 12px rgba(66,153,225,0.18);
+            width:90px;
+            height:90px;
+            border-radius:6px;
+            object-fit:cover;
+            border:1px solid #ccc;
         }
-        .header-info h1 {
-            font-size: 2.3em;
-            margin-bottom: 8px;
-            letter-spacing: 2px;
+        .name-info h1 {
+            font-size:32px;
+            color:#222;
+            margin-bottom:8px;
         }
-        .header-info p {
-            margin: 4px 0;
-            font-size: 1.08em;
-            opacity: 0.93;
-        }
-        .header-info .intent {
-            margin-top: 10px;
-            font-weight: bold;
-            background: rgba(255,255,255,0.18);
-            display: inline-block;
-            padding: 4px 16px;
-            border-radius: 16px;
-            font-size: 1em;
-        }
-        .resume-main {
-            padding: 36px 40px 30px 40px;
+        .contact {
+            font-size:14px;
+            color:#444;
+            line-height:1.8;
         }
         section {
-            margin-bottom: 32px;
+            margin-bottom:32px;
         }
-        h2 {
-            color: #4299e1;
-            font-size: 1.35em;
-            border-left: 5px solid #48bb78;
-            padding-left: 14px;
-            margin-bottom: 16px;
-            letter-spacing: 1px;
+        .sec-title {
+            font-size:18px;
+            border-left:4px solid #333;
+            padding-left:10px;
+            margin-bottom:15px;
+            color:#222;
         }
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 8px;
+        .item-title {
+            display:flex;
+            justify-content:space-between;
+            font-weight:bold;
+            margin-bottom:8px;
         }
-        .skill-tag {
-            background: linear-gradient(90deg, #bee3f8 0%, #c6f6d5 100%);
-            color: #22543d;
-            padding: 7px 18px;
-            border-radius: 18px;
-            font-size: 1em;
-            font-weight: 500;
-            box-shadow: 0 1px 4px rgba(72,187,120,0.08);
-        }
-        .project-item, .award-item {
-            background: #f7fafc;
-            border-left: 4px solid #4299e1;
-            padding: 16px 18px;
-            border-radius: 8px;
-            margin-bottom: 16px;
-            box-shadow: 0 1px 4px rgba(66,153,225,0.06);
-        }
-        .project-title, .award-title {
-            font-weight: bold;
-            color: #22223b;
-            margin-bottom: 6px;
-            font-size: 1.08em;
-        }
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        li {
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
-        }
-        li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #48bb78;
-            font-size: 1.2em;
-        }
-        .contact-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 24px;
-            margin-top: 10px;
-        }
-        .contact-list li {
-            padding-left: 0;
-            margin-bottom: 0;
-            position: static;
-            font-size: 1em;
-        }
-        .contact-list li::before {
-            display: none;
-        }
-        @media (max-width: 700px) {
-            .resume-header, .resume-main {
-                padding: 18px 10px;
-            }
-            .resume-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 18px;
-            }
+        .content-text {
+            font-size:14px;
+            line-height:1.7;
+            color:#333;
+            text-align:justify;
         }
     </style>
 </head>
 <body>
-    <div class="resume-wrapper">
-        <div class="resume-header">
-            <img class="avatar" src="head.jpg" alt="个人照片">
-            <div class="header-info">
-                <h1>高榆棋</h1>
-                <p>年龄：22 岁 | 郑州西亚斯学院 · 软件工程 2023级</p>
-                <p>联系电话：15978495906</p>
-                <span class="intent">求职意向：后端开发 / AI应用开发</span>
+<div class="resume-box">
+    <!--头部信息-->
+    <div class="header">
+        <img class="avatar" src="me.jpg"alt="头像">
+        <div class="name-info">
+            <h1>高榆棋</h1>
+            <div class="contact">
+                <span>☏ 电话：15978495906</span>　　
+                <span>✉ 邮箱：15978495906@163.com</span><br>
+                <span>♂ 性别：男</span>　　
+                <span>🎓 最高学历：本科</span>　　
+                <span>🏫 学校：郑州西亚斯学院</span>　　
+                <span>⏱ 可实习时长6个月以上</span>
             </div>
         </div>
-        <div class="resume-main">
-            <section>
-                <h2>个人简介</h2>
-                <p>大三在读，熟悉前后端开发流程，了解AI应用与Agent开发方向。在校期间担任班长，有良好的沟通与团队协作能力，已通过英语四六级，能快速学习并应用新技术解决问题。</p>
-            </section>
-            <section>
-                <h2>专业技能</h2>
-                <div class="skill-tags">
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">C</span>
-                    <span class="skill-tag">HTML/CSS/JavaScript</span>
-                    <span class="skill-tag">Spring Boot</span>
-                    <span class="skill-tag">Git / GitHub</span>
-                    <span class="skill-tag">AI Agent 开发</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">Docker 基础</span>
-                </div>
-            </section>
-            <section>
-                <h2>项目经历</h2>
-                <div class="project-item">
-                    <div class="project-title">基于SpringBoot的校园社团管理系统 <span style="float:right;font-weight:normal;color:#718096;">2025年2月-2025年5月</span></div>
-                    <p>负责后端整体架构搭建，基于 SpringBoot 实现用户登录认证、角色权限控制、社团管理、活动发布、报名审批等核心业务功能。独立设计数据库表结构，编写 MyBatis 数据访问层，完成增删改查、分页查询、条件筛选等接口开发。处理前后端数据交互，完成接口联调与问题排查，保证接口稳定、高效、可复用。使用 AI + Agent 工具优化代码逻辑、规范项目结构、自动生成标准化注释与测试用例，显著提升开发效率。</p>
-                </div>
-                <div class="project-item">
-                    <div class="project-title">机器人大赛嵌入式开发项目 <span style="float:right;font-weight:normal;color:#718096;">2025年5月-2025年7月</span></div>
-                    <p>参与省级机器人大赛项目，负责嵌入式模块开发与调试，完成硬件控制与数据交互功能，熟悉嵌入式开发流程与团队协作模式。</p>
-                </div>
-                <div class="project-item">
-                    <div class="project-title">实践经历 <span style="float:right;font-weight:normal;color:#718096;">2025年4月-2025年7月</span></div>
-                    <p>老师对接公司接取项目，项目名为实验室管理系统，本人负责原型设计，产品需求分析，借助AI工具独立完成前端页面编程。</p>
-                </div>
-            </section>
-            <section>
-                <h2>获奖经历</h2>
-                <div class="award-item">
-                    <div class="award-title">全国计算机设计大赛 省级奖项</div>
-                    <p>参与并获得河南省计算机设计大赛省级奖项，项目围绕软件开发方向开展，提升了对软件开发流程与团队协作的理解。</p>
-                </div>
-                <div class="award-item">
-                    <div class="award-title">机器人大赛 省级奖项</div>
-                    <p>参与省级机器人大赛并获奖，负责嵌入式模块开发，提升了硬件调试与问题排查能力。</p>
-                </div>
-            </section>
-            <section>
-                <h2>教育背景</h2>
-                <ul>
-                    <li>郑州西亚斯学院 · 软件工程专业 · 2023级（目前大三在读）</li>
-                    <li>英语水平：CET-4、CET-6 已通过</li>
-                </ul>
-            </section>
-            <section>
-                <h2>联系方式</h2>
-                <ul class="contact-list">
-                    <li>邮箱：15978495906@163.com</li>
-                    <li>GitHub：github.com/yuqi668</li>
-                    <li>个人简历网站：yuqi668.github.io/Resume/</li>
-                </ul>
-            </section>
-        </div>
     </div>
+
+    <!--竞赛证书-->
+    <section>
+        <div class="sec-title">竞赛，证书</div>
+        <div class="content-text">
+            中国大学生计算机设计大赛省三　河南省机器人大赛省三　校级英语演讲比赛二等奖<br>
+            CET-4(540)　CET-6(469)　优秀学生干部荣誉证书　C1机动车驾驶证
+        </div>
+    </section>
+
+    <!--实习经历-->
+    <section>
+        <div class="sec-title">实习经历</div>
+        <div class="item-title">
+            <span>郑州小研在线信息技术有限公司</span>
+            <span>2025.04 - 2025.07</span>
+        </div>
+        <div class="content-text">
+由导师对接公司，参与《智慧实验室管理系统》开发，本人负责原型设计，产品需求分析，借助AI工具完成部分前端页面编程，定期开会汇报进度。<br>
+原型设计阶段：利用墨刀，Axure等原型工具完成Web端原型设计，样式确定后利用Cursor+Claude大型辅助编程，依据给的样式多次调整生成部分前端代码并预留后端接口（查询，上传，等等）交由后续开发人员使用。
+        </div>
+    </section>
+
+    <!--项目经历-->
+    <section>
+        <div class="sec-title">项目经历</div>
+        <div class="item-title">
+            <span>基于SpringBoot校园社团管理系统</span>
+            <span>2025.01 - 2025.05</span>
+        </div>
+        <div class="content-text">
+1. 搭建项目分层架构，配置数据源与HikariCP连接池，优化数据库访问效率；<br>
+2. 完成实体类、Mapper、Service、Controller各层级代码开发，实现社团、活动、用户等核心CRUD接口；<br>
+3. 实现登录认证与权限控制，区分普通用户、管理员角色，限制不同账号操作权限；<br>
+4. 搭建全局异常处理，统一捕获并封装异常信息，规范接口返回结果；<br>
+5. 完成接口联调与功能测试，排查并修复BUG，保障功能稳定运行；<br>
+6. 封装通用返回类，统一所有接口的返回格式，区分成功、异常状态，方便前端对接。
+        </div>
+    </section>
+
+    <!--在校经历-->
+    <section>
+        <div class="sec-title">在校经历</div>
+        <div class="item-title">
+            <span>兼职：辅导班英语讲师</span>
+            <span>2026.01 - 2026.02</span>
+        </div>
+        <div class="content-text">在郑州优实力教育机构担任初中英语讲师，工作内容：日常考勤，试卷讲解，难题解答，技巧教学，作业批改，并于家长沟通孩子的学习情况。</div>
+
+        <div class="item-title" style="margin-top:14px;">
+            <span>班长</span>
+            <span>2023.09 - 至今</span>
+        </div>
+        <div class="content-text">牵头班级各项事务统筹，做好上传下达与人员协调；对待工作严谨踏实，服从安排，具备较强的集体服务意识与抗压能力。</div>
+
+        <div class="item-title" style="margin-top:14px;">
+            <span>自主创业：寒假劳务统筹</span>
+            <span>2023.11 - 2024.02</span>
+        </div>
+        <div class="content-text">寒假期间帮助近20名同学对接岗位，解决了同学们的交通，住宿，薪资发放等问题。</div>
+
+        <div class="item-title" style="margin-top:14px;">
+            <span>兼职：散打教练</span>
+            <span>2024.05 - 2025.08</span>
+        </div>
+        <div class="content-text">课余时间在新郑市豫麒散打俱乐部任教，工作内容：日常教学，秩序管理</div>
+    </section>
+
+    <!--自我评价-->
+    <section>
+        <div class="sec-title">自我评价</div>
+        <div class="content-text">
+本人软件开发能力强，英语听说读写能力强，性格稳重有责任心，擅长沟通协调，实践经验丰富，吃苦耐劳，专业知识掌握扎实，自律自强，重在上岗实操学习，不计较薪资待遇
+        </div>
+    </section>
+</div>
 </body>
 </html>
