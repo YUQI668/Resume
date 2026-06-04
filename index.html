@@ -2,170 +2,108 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>高榆棋 - 个人简历</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Microsoft YaHei", sans-serif;
-        }
         body {
-            background: #eee;
-            padding: 30px;
+            width: 800px;
+            margin: 30px auto;
+            font-family: "Microsoft Yahei", SimSun, sans-serif;
+            line-height: 1.8;
+            color: #333;
         }
-        .resume-box {
-            width: 820px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 40px 50px;
-            box-shadow: 0 0 12px #ddd;
-        }
-        .header {
+        .head-box {
             display: flex;
             align-items: center;
-            gap:22px;
-            margin-bottom:35px;
+            gap: 30px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 15px;
         }
         .avatar {
-            width:90px;
-            height:90px;
-            border-radius:6px;
-            object-fit:cover;
-            border:1px solid #ccc;
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid #999;
         }
-        .name-info h1 {
-            font-size:32px;
-            color:#222;
-            margin-bottom:8px;
+        .info h2 {
+            margin: 0;
+            font-size: 24px;
         }
-        .contact {
-            font-size:14px;
-            color:#444;
-            line-height:1.8;
-        }
-        section {
-            margin-bottom:32px;
-        }
-        .sec-title {
-            font-size:18px;
-            border-left:4px solid #333;
-            padding-left:10px;
-            margin-bottom:15px;
-            color:#222;
+        .section {
+            margin-bottom: 18px;
         }
         .item-title {
-            display:flex;
-            justify-content:space-between;
-            font-weight:bold;
-            margin-bottom:8px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 22px;
+            border-left: 4px solid #2277cc;
+            padding-left: 8px;
+            margin-bottom: 8px;
         }
-        .content-text {
-            font-size:14px;
-            line-height:1.7;
-            color:#333;
-            text-align:justify;
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-<div class="resume-box">
-    <!--头部信息-->
-    <div class="header">
-        <img class="avatar" src="me.jpg"alt="头像">
-        <div class="name-info">
-            <h1>高榆棋</h1>
-            <div class="contact">
-                <span>☏ 电话：15978495906</span>　　
-                <span>✉ 邮箱：15978495906@163.com</span><br>
-                <span>♂ 性别：男</span>　　
-                <span>🎓 最高学历：本科</span>　　
-                <span>🏫 学校：郑州西亚斯学院</span>　　
-                <span>⏱ 可实习时长6个月以上</span>
-            </div>
-        </div>
+
+<!-- 头部信息 -->
+<div class="head-box">
+    <img src="me.jpg" alt="头像" class="avatar">
+    <div class="info">
+        <h2>高榆棋</h2>
+        <p>电话：15978495906｜性别：男｜可实习时长：6个月以上<br>
+        邮箱：15978495906@163.com｜本科｜郑州西亚斯学院</p>
     </div>
-
-    <!--竞赛证书-->
-    <!-- 竞赛，证书 模块 -->
-<section>
-    <div class="sec-title">竞赛，证书</div>
-    <div class="content-text">
-        中国大学生计算机设计大赛省三　河南省机器人大赛省三　校级英语演讲比赛二等奖<br>
-        CET-4(540)　CET-6(469)　优秀学生干部荣誉证书　C1机动车驾驶证
-        <br><br>
-        <a href="certificates.html" target="_blank" style="color:#0066cc; font-weight:bold; text-decoration:underline;">
-            点击查看所有证书 & 获奖证明
-        </a>
-    </div>
-</section>
-
-    <!--实习经历-->
-    <section>
-        <div class="sec-title">实习经历</div>
-        <div class="item-title">
-            <span>郑州小研在线信息技术有限公司</span>
-            <span>2025.04 - 2025.07</span>
-        </div>
-        <div class="content-text">
-由导师对接公司，参与《智慧实验室管理系统》开发，本人负责原型设计，产品需求分析，借助AI工具完成部分前端页面编程，定期开会汇报进度。<br>
-原型设计阶段：利用墨刀，Axure等原型工具完成Web端原型设计，样式确定后利用Cursor+Claude大型辅助编程，依据给的样式多次调整生成部分前端代码并预留后端接口（查询，上传，等等）交由后续开发人员使用。
-        </div>
-    </section>
-
-    <!--项目经历-->
-    <section>
-        <div class="sec-title">项目经历</div>
-        <div class="item-title">
-            <span>基于SpringBoot校园社团管理系统</span>
-            <span>2025.01 - 2025.05</span>
-        </div>
-        <div class="content-text">
-1. 搭建项目分层架构，配置数据源与HikariCP连接池，优化数据库访问效率；<br>
-2. 完成实体类、Mapper、Service、Controller各层级代码开发，实现社团、活动、用户等核心CRUD接口；<br>
-3. 实现登录认证与权限控制，区分普通用户、管理员角色，限制不同账号操作权限；<br>
-4. 搭建全局异常处理，统一捕获并封装异常信息，规范接口返回结果；<br>
-5. 完成接口联调与功能测试，排查并修复BUG，保障功能稳定运行；<br>
-6. 封装通用返回类，统一所有接口的返回格式，区分成功、异常状态，方便前端对接。
-        </div>
-    </section>
-
-    <!--在校经历-->
-    <section>
-        <div class="sec-title">在校经历</div>
-        <div class="item-title">
-            <span>兼职：辅导班英语讲师</span>
-            <span>2026.01 - 2026.02</span>
-        </div>
-        <div class="content-text">在郑州优实力教育机构担任初中英语讲师，工作内容：日常考勤，试卷讲解，难题解答，技巧教学，作业批改，并于家长沟通孩子的学习情况。</div>
-
-        <div class="item-title" style="margin-top:14px;">
-            <span>班长</span>
-            <span>2023.09 - 至今</span>
-        </div>
-        <div class="content-text">牵头班级各项事务统筹，做好上传下达与人员协调；对待工作严谨踏实，服从安排，具备较强的集体服务意识与抗压能力。</div>
-
-        <div class="item-title" style="margin-top:14px;">
-            <span>自主创业：寒假劳务统筹</span>
-            <span>2023.11 - 2024.02</span>
-        </div>
-        <div class="content-text">寒假期间帮助近20名同学对接岗位，解决了同学们的交通，住宿，薪资发放等问题。</div>
-
-        <div class="item-title" style="margin-top:14px;">
-            <span>兼职：散打教练</span>
-            <span>2024.05 - 2025.08</span>
-        </div>
-        <div class="content-text">课余时间在新郑市豫麒散打俱乐部任教，工作内容：日常教学，秩序管理</div>
-    </section>
-
-    <!--自我评价-->
-    <section>
-        <div class="sec-title">自我评价</div>
-        <div class="content-text">
-本人软件开发能力强，英语听说读写能力强，性格稳重有责任心，擅长沟通协调，实践经验丰富，吃苦耐劳，专业知识掌握扎实，自律自强，重在上岗实操学习，不计较薪资待遇
-        </div>
-    </section>
 </div>
+
+<!-- 荣誉证书 + 证书页面跳转 -->
+<div class="section">
+    <div class="item-title">荣誉证书</div>
+    <p>
+        全国大学生计算机设计大赛省三、河南省大学生机器人竞赛省三、CET4-540分、CET6-469分，优秀班干，C1
+        <a href="certificates.html" style="margin-left:10px;">【查看证书照片】</a>
+    </p>
+</div>
+
+<!-- 实习经历（完整保留） -->
+<div class="section">
+    <div class="item-title">实习经历</div>
+    <p><b>2025.07 - 2025.09｜郑州小研在线信息技术有限公司</b><br>
+    参与企业级“智慧实验室管理系统”开发，本人负责原型设计，产品需求分析，借助AI工具完成部分前端页面辅助编程；原型阶段：利用墨刀、Axure等原型制作工具完成Web端原型设计，样式确定后利用Cursor中Claude大模型辅助编程，依据样式多次调整生成部分前端代码并预留后端接口(查询,上传,等等)交由后续开发人员使用，定期开会汇报进度。</p>
+</div>
+
+<!-- 项目经历（完整保留） -->
+<div class="section">
+    <div class="item-title">项目经历</div>
+
+    <p><b>2026.02 - 2026.03｜电商平台的AI智能助手</b><br>
+    项目简介:引入 SpringAI 框架,整合 DeepSeek API,实现智能客服问答,以下是所遇问题与解决方案:<br>
+    1：外网大模型接口抖动、超时、限流,导致电商页面 AI 功能雪崩、线程阻塞。<br>
+    解决方法:整合 Resilience4j 实现 AI 接口熔断、降级、重试策略,API 异常时自动返回兜底话术,保障系统可用<br>
+    2：跨域拦截 + 网关重放攻击拦截问题<br>
+    解决方案:自定义 SpringAI 请求白名单过滤器,针对大模型流式接口 SSE 请求 单独放行,关闭网关重复提交拦截校验,适配流式长链接特性<br>
+    3：用户输入恶意 Prompt、SQL 注入、越界提问,触发系统安全拦截,导致 AI 问答直接报错<br>
+    解决方案:基于 SpringAI 前置拦截器实现 用户输入敏感词过滤、非法 Prompt 清洗,过滤高危提问</p>
+
+    <p><b>2025.05 - 2025.07｜基于SpringBoot校园社团管理系统</b><br>
+    1.搭建项目分层架构,配置数据源与 HikariCP 连接池,优化数据库访问效率;<br>
+    2.完成entity、Mapper、Service、Controller各层级代码开发,实现社团、活动、用户等核心 CRUD 接口;<br>
+    3.实现登录认证与权限控制，搭建全局异常处理,统一捕获并封装异常信息,规范接口返回结果<br>
+    4.封装通用返回类,统一所有接口的返回格式<br>
+    5.完成接口联调与功能测试,排查修复 BUG,保障功能稳定运行</p>
+</div>
+
+<!-- 技能（完整保留） -->
+<div class="section">
+    <div class="item-title">相关技能</div>
+    <p>英语听说读写能力强；数据库；功能测试；前端，Vibe coding能力强，利用codex能独立开发，熟练运用agent</p>
+</div>
+
 </body>
 </html>
